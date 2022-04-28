@@ -1,0 +1,54 @@
+
+* {
+  --background: rgb(232, 226, 226);
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+
+}
+
+code {
+  font-family: 'Courier New', monospace;
+}
+
+body {
+  background-color: var(--background);
+  margin: 0;
+  -webkit-font-smoothing:antialiased;
+  font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+}
+
+:root {
+  --background: rgb(232, 226, 226);
+  --text-primary: rgb(38, 36, 36);
+  --text-secondary: rgb(116, 153, 184);
+  --accent: rgb(53, 97, 152);
+  --hover: rgb(184, 203, 218);
+}
+[data-theme='dark'] {
+  --background: rgb(38, 36, 36);
+  --text-primary: rgb(200, 187, 187);
+  --text-secondary: grey;
+  --accent: rgb(87, 5, 5);
+  --hover: rgb(46, 57, 67);
+}
+
+.App {
+  width: 100%;
+  color: var(--text-primary);
+  background-color: var(--background);
+  font-size: large;
+  padding: 0;
+  height: 100vh;
+  transition: all .5s;
+  margin: 0;
+}
+
+
+.button {
+  color: var(--text-primary);
+  background-color: var(--background);
+  border: 2px var(--text-primary) solid;
+  float: right;
+  transition: all .5s;
+}

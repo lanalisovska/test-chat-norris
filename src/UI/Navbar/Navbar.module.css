@@ -1,0 +1,30 @@
+.navbar {
+    height: 100px;
+    background-color:  var(--text-secondary);
+    padding: 10px 50px;
+    color: var(--background);
+    display: flex;
+    flex-direction: row;
+    justify-content: right;
+    align-items: center;
+  }
+  
+.navbar_links  a{
+     text-decoration: none;
+     color: var(--background);
+     margin: 10px; 
+  }
+
+.navbar_links  a:hover{
+    color: var(--background);
+    border-bottom: 1px solid black;
+    padding-bottom: 5px;
+    
+ }
+
+
+.icon {
+  width: 40px;
+  height: 40px;
+}
+
