@@ -1,5 +1,7 @@
 import messages from './messages'
 
-export default {
+const reducers = {
     messages
 }
+
+export default reducers

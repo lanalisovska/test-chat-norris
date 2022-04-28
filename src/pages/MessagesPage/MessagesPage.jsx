@@ -8,7 +8,7 @@ const  MessagesPage = ({messages, setUserName, imgUser}) =>  {
 const me = 'Me'
  useEffect(() => {
     setUserName(messages.username)
- }, [messages.username])
+ }, [setUserName, messages.username])
  
     return (
      <div className={s.messages_wrapper}>

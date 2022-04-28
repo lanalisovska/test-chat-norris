@@ -1,4 +1,3 @@
-import App from "../App";
 import Chats from "../pages/Chats/Chats";
 
 export const routes = [

@@ -8,7 +8,7 @@ export default function InputElement({sendMessage}) {
      
     const sendNewMessage = () => {
         sendMessage(message)
-        reset()
+         setMessage('')
     }
     const { register, formState: { errors, isValid }, handleSubmit, reset } = useForm({ mode: 'onBlur' })
 
@@ -27,7 +27,7 @@ export default function InputElement({sendMessage}) {
              placeholder='new message...'/>
                <span style={{ color: 'red' }}>{errors?.username && <p>{errors?.username?.message}</p>}</span>
                
-            <button onClick={() => sendNewMessage(message)} disabled={!isValid} >Send message</button>
+            <button onClick={() => sendNewMessage(message)}  >Send message</button>
             </form>
         </div>
     )

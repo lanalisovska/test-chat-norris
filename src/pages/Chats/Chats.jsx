@@ -30,7 +30,7 @@ const openChat = (user) => {
 
 const searchedUserName = useMemo(() => {
     return users.filter(user => user.username.includes(searchQuery))
-}, [searchQuery])
+}, [users,searchQuery])
 
 
 

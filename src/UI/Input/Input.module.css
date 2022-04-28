@@ -1,0 +1,30 @@
+.input_wrapper input {
+    width: 500px;
+    margin: 20px;
+    height: 50px;
+    border:tan 1px solid;
+    border-radius: 10px;
+    padding: 5px;
+    background-color: inherit;
+    font-size: 12px;
+    color: var(--text-primary);
+
+}
+.input_wrapper  {
+    border-top: 1px solid gray;
+}
+
+
+.input_wrapper button {
+    width: 100px;
+    height: 40px;
+    background-color: var(--accent);
+    border: 1px gray solid;
+    border-radius: 10px;
+    font-size: 10px;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
+.input_wrapper button:hover {
+    background-color: var(--hover);
+    transition: all .5s;
+}
