@@ -10,7 +10,7 @@ export default function InputElement({sendMessage}) {
         sendMessage(message)
          setMessage('')
     }
-    const { register, formState: { errors, isValid }, handleSubmit, reset } = useForm({ mode: 'onBlur' })
+    const { register, formState: { errors}, handleSubmit } = useForm({ mode: 'onBlur' })
 
     return (
         <div className={s.input_wrapper}>
