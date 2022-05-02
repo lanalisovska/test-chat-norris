@@ -1,4 +1,4 @@
-import React, { useEffect, useState } from 'react'
+import React, {useState } from 'react'
 import s from './Chats.module.css'
 import online_icon from './../../UI/icons/online_status.png'
 import offline_icon from './../../UI/icons/offline_status.png'
