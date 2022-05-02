@@ -1,6 +1,7 @@
 import React, { useState } from 'react'
 import s from './Input.module.css'
 import { useForm } from 'react-hook-form'
+import btn_send from './../icons/send-button.png'
 
 export default function InputElement({sendMessage}) {
 
@@ -27,7 +28,7 @@ export default function InputElement({sendMessage}) {
              placeholder='new message...'/>
                <span style={{ color: 'red' }}>{errors?.username && <p>{errors?.username?.message}</p>}</span>
                
-            <button onClick={() => sendNewMessage(message)}  >Send message</button>
+             <div> <img className={s.send_icon} src={btn_send} onClick={() => sendNewMessage(message)}/></div>
             </form>
         </div>
     )

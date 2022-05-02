@@ -1,21 +1,44 @@
 .wrapper_messages {
-    width: 800px;
-    margin: 2px 100px;
- 
-    height: auto;
-    padding: 10px;
+    width: 1400px;
+    padding: 15px 0;
+    height: 700px;
     display: flex;
-    flex-direction: row;
+    flex-direction: column;
+    flex-wrap: wrap;
+    align-content: stretch;
+ 
+    align-items: center;
+
+}
+.so {
+  background-color: red;
+  height: 30px;
+  scroll-behavior: smooth;
+}
+ 
+.elements_of_chat {
+  display: flex;
+  flex-direction: column;
+  height: 650px;
+  width: 1000px;
+  margin: 10px 0;
+  padding: 30px 2px;
+
 
 }
 .userList {
-  border-right: gray 1px solid;
-  padding: 5px;
-  width: 200px;
+
+  padding: 0 5px;
+  width: 280px;
+  display: flex;
+  flex-direction: column; 
+  justify-content: flex-start;
+  flex-wrap: nowrap;
+  height: auto;
 }
 .userList input {
   width: 180px;
-  font-size: 12px;
+  font-size: 17px;
   padding: 5px;
   height: 25px;
   margin: 0 3px;
@@ -36,18 +59,16 @@ padding-left:30px;
 
 .userItem {
     border: 1px gray solid;
-    margin: 10px 5px;
-    width: 180px;
-    height: 60px;
+    margin: 10px 10px;
+    width: 250px;
+    height: 80px;
     border-radius: 10px;
     padding: 3px 5px;
-    font-size: 13px;
-
+    font-size: 20px;
     display: flex;
     flex-direction: row;
     align-items: center;
-   
-    flex-wrap: wrap;
+    flex-wrap: wrap; 
 }
 
 .userItem:hover {
@@ -75,22 +96,35 @@ padding-left:30px;
 }
 
 .chat_wrapper{
-   width: 800px;
-   padding: 0;
+ 
+   padding: 10px;
+   height: 600px;
+
+   width: 1000px;
    justify-content: center;
-   display: flex;
+   margin: 10px;
    flex-direction: column;
+   display: flex;
    align-items: center;
    font-family: Verdana, Geneva, Tahoma, sans-serif;
-   font-size: 16px;
-   color: var(--text-secondary)
+   font-size: 25px;
+   color: var(--text-secondary);
+   border-left: 1px gray solid;
+
    
 }
 
 .chat_wrapper iframe {
-  width: 100px;
-  height:100px;
+  width: 150px;
+  height:150px;
   border: none;
+  margin: 100px;
 }
 
+.chat_wrapper p {
+  margin: 100px;
+  width: 150px;
+  height:50px;
+  font-size: 20px;
+}
  

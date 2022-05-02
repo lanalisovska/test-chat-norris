@@ -18,8 +18,11 @@ function App() {
   return (
     <BrowserRouter>
        <div className='App' data-theme={theme}>
+         
            <Navbar switchTheme={switchTheme} theme={theme} />
+           <div className='content'>
            <AppRouter />
+           </div>
        </div>
        </BrowserRouter>
    

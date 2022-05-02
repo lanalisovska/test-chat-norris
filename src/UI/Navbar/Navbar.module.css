@@ -1,7 +1,7 @@
 .navbar {
     height: 100px;
     background-color:  var(--text-secondary);
-    padding: 10px 50px;
+    padding: 10px 100px;
     color: var(--background);
     display: flex;
     flex-direction: row;

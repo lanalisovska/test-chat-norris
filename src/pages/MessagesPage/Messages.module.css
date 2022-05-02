@@ -1,14 +1,17 @@
 .messages_wrapper {
-    min-height: 50px;
-    height: 300px;
-    padding: 0px;
-    overflow-y: scroll;
-    min-width: 670px;
-    margin: 0;
+    min-height: 500px;
+    height: 600px;
+    padding: 0;
+    overflow: auto;
+    scroll-behavior: smooth;
+    margin: 5px;
     display: flex;
     flex-direction: column;
-    scroll-behavior:auto;
-
+   
+}
+.so {
+    background-color: green;
+    height: 20px;
 }
 
 
@@ -39,6 +42,7 @@
     display: flex;
     flex-direction: row;
     align-items: center;
+   
 } 
 .message_my {
     margin: 10px;
@@ -57,16 +61,14 @@
 
 .message span, 
 .message_my span {
-    font-size: 7px;
+    font-size: 12px;
     margin: 5px;
 
 }
 
-
-
 .message_body{
     border: 1px solid gray;
-    padding: 5px 10px;
+    padding: 10px 10px;
     border-radius: 10px;
-    font-size: 9px;
+    font-size: 17px;
 }

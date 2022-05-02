@@ -20,8 +20,11 @@ const [searchQuery, setSearchQuery] = useState('')
 const [imgUser, setImgUser] = useState('')
 const [id, setId] = useState('')
 
+
 const { users } = useSelector(state => state.messages)
 const dispatch = useDispatch()
+
+
 
 const openChat = (user) => {
     setVisibleChat(true)
@@ -34,7 +37,6 @@ const searchedUserName = useMemo(() => {
 
 
 
-
 const sendMessage = (message) => {
     const newMessage = {
         id: new Date(),
@@ -43,7 +45,7 @@ const sendMessage = (message) => {
         time: new Date().toLocaleTimeString(),
         username: 'Me'
     }
-   localStorage.setItem(`${newMessage.id}`, JSON.stringify(newMessage))
+
 
     const userId = id
     dispatch(returnJokeSendMessage(newMessage, userId, username))
@@ -53,6 +55,10 @@ const sendMessage = (message) => {
        setTimeout(() => {
            setModalVisible(false)
        }, 5000)
+ 
+
+
+
 }
 return (
     <div className={s.wrapper_messages}>
@@ -66,12 +72,13 @@ return (
            )}
          </div>
         <div className={s.chat_wrapper}> {visibleChat 
-        ? <>
+        ? <div className={s.elements_of_chat}>
            <ChatHeader username={username} imgUser={imgUser}/>
-           <MessagesPage messages={messages} setUserName={setUserName} imgUser={imgUser} />
+           <MessagesPage messages={messages}  sendMessage={sendMessage} setUserName={setUserName} imgUser={imgUser} />
+
             <InputElement sendMessage={sendMessage} />
             {modalVisible ? <Modal>{username}</Modal>: ''}
-            </>
+            </div>
         : <div> 
             <iframe title='gif'src="https://giphy.com/embed/26FxyQeyHXDXiuvio"></iframe> 
             <p>Choose chat </p>

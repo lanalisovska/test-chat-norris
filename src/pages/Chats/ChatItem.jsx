@@ -23,8 +23,8 @@ const ChatItem = ({user, openNewChat, setId, messages, setImgUser}) => {
             <div><img src={image} alt='user' /></div>
             <div className={s.username}> {username}</div>
             <div className={s.satus_user}> {statususer
-            ?<><img alt='online' src={online_icon}/><span>online</span></>
-             : <><img alt='offline' src={offline_icon}/> <span>offline</span> </>}</div>
+            ?<><img alt='online' src={online_icon}/></>
+             : <><img alt='offline' src={offline_icon}/></>}</div>
              
         </div>
 

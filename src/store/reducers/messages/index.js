@@ -3,10 +3,11 @@ import Bella from './../../../images/Bella.jpeg'
 import Buddy from './../../../images/BUDDY.jpeg'
 import Leo from './../../../images/LEO.jpeg'
 import Max from './../../../images/MAX.jpeg'
+import Millo from './../../../images/Millo.jpeg'
 
 
 const ADD_NEW_MESSAGE = 'ADD_NEW_MESSAGE'
-const RETURN_JOKE = 'RETURN_JOKE'
+
 
 
 
@@ -32,6 +33,13 @@ const initialState = {
         {id:4, username: 'Max', status: false, image: Max, messages: 
         [{id: 1, username: 'Max', message:'Hi, my name is Max!', date: new Date(2022, 3, 25).toDateString(), time: new Date(2022, 3, 24, 22,20).toLocaleTimeString()},  ], 
         lastDateMessage: []},
+
+        {id:5, username: 'Millo', status: false, image: Millo, messages: 
+        [{id: 1, username: 'Max', message:'Hi, my name is Millo!', date: new Date(2022, 3, 25).toDateString(), time: new Date(2022, 3, 24, 22,20).toLocaleTimeString()},  ], 
+        lastDateMessage: []},
+        {id:6, username: 'Millo2', status: false, image: Millo, messages: 
+        [{id: 1, username: 'Millo2', message:'This is my second account!', date: new Date(2022, 3, 25).toDateString(), time: new Date(2022, 3, 24, 22,20).toLocaleTimeString()},  ], 
+        lastDateMessage: []},
     ]
 }
 
@@ -47,15 +55,15 @@ export default function  messagesReducer(state = initialState, action) {
                 return u
             })
         }
-        case RETURN_JOKE:  return {
-            ...state,
-            users: state.users.map(u => {
-                if (u.id === action.userId) {
-                    return { ...u, ...u.username, ...u.status, ...u.image, ...u.messages.push(action.newJoke), ...u.lastDateMessage = action.newMessage.date}
-                }
-                return u
-            })
-        }
+        // case RETURN_JOKE:  return {
+        //     ...state,
+        //     users: state.users.map(u => {
+        //         if (u.id === action.userId) {
+        //             return { ...u, ...u.username, ...u.status, ...u.image, ...u.messages.push(action.newJoke), ...u.lastDateMessage}
+        //         }
+        //         return u
+        //     })
+        // }
       
         default: 
         return state
@@ -63,20 +71,18 @@ export default function  messagesReducer(state = initialState, action) {
 }
 
 export const addNewMessage = (newMessage, userId) => ({ type:ADD_NEW_MESSAGE, newMessage, userId})
-export const returnNewJoke = (newJoke, userId) => ({type: RETURN_JOKE, newJoke, userId})
+// export const returnNewJoke = (newJoke, userId) => ({type: RETURN_JOKE, newJoke, userId})
 
 
 export const returnJokeSendMessage = (newMessage, userId, username) =>  async (dispatch) => {
-    const newMess = localStorage.getItem(`${newMessage.id}`)
+    // const newMess = localStorage.getItem(`${newMessage.id}`)
 
-    dispatch(addNewMessage(JSON.parse(newMess), userId)) 
-
-    
+    dispatch(addNewMessage(newMessage, userId)) 
 
     try {
         const response = await UserService.getChuckJoke()
         const newJoke = {
-            id: response.data.id,
+            id: JSON.stringify(response.data.id),
             username: username,
             date: new Date().toDateString(),
             time: new Date().toLocaleTimeString(),
@@ -84,7 +90,7 @@ export const returnJokeSendMessage = (newMessage, userId, username) =>  async (d
         }
          setTimeout(() => {
             dispatch(addNewMessage(newJoke, userId))
-            localStorage.setItem('lastMess', newJoke.message)
+            // localStorage.setItem('lastMess', newJoke.message)
         }, 2000) 
 
  
