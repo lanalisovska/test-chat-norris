@@ -4,12 +4,10 @@ import online_icon from './../../UI/icons/online_status.png'
 import offline_icon from './../../UI/icons/offline_status.png'
 
 
-const ChatItem = ({user, openNewChat, setId, messages, setImgUser}) => {
+const ChatItem = ({user, openNewChat, setId,setImgUser}) => {
 
     const { username, id, image} = user
     const [statususer, setStatusUser] = useState(false)
-
-
 
     const openChat = (user) => {
        openNewChat(user)
@@ -17,7 +15,6 @@ const ChatItem = ({user, openNewChat, setId, messages, setImgUser}) => {
        setId(id)
        setImgUser(image)
     }
- 
 
     return (
         <div className={s.userItem} onClick={() => openChat(user)}>

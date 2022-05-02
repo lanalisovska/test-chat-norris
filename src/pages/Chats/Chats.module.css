@@ -1,40 +1,32 @@
 .wrapper_messages {
-    width: 1400px;
-    padding: 15px 0;
-    height: 700px;
+    width: 1300px;
+    padding: 35px 0;
+    height: 800px;
     display: flex;
-    flex-direction: column;
-    flex-wrap: wrap;
-    align-content: stretch;
- 
-    align-items: center;
+    flex-direction: row;
+    flex-wrap: nowrap;
+}
 
-}
-.so {
-  background-color: red;
-  height: 30px;
-  scroll-behavior: smooth;
-}
- 
 .elements_of_chat {
   display: flex;
   flex-direction: column;
-  height: 650px;
-  width: 1000px;
+ 
   margin: 10px 0;
   padding: 30px 2px;
-
-
+  height: 600px;
+  width: 900px;
 }
 .userList {
 
-  padding: 0 5px;
+  padding: 10px 5px;
   width: 280px;
   display: flex;
   flex-direction: column; 
   justify-content: flex-start;
   flex-wrap: nowrap;
   height: auto;
+  min-height:50px;
+  border-right: 1px solid gray;
 }
 .userList input {
   width: 180px;
@@ -99,8 +91,7 @@ padding-left:30px;
  
    padding: 10px;
    height: 600px;
-
-   width: 1000px;
+   width: 900px;
    justify-content: center;
    margin: 10px;
    flex-direction: column;
@@ -109,7 +100,7 @@ padding-left:30px;
    font-family: Verdana, Geneva, Tahoma, sans-serif;
    font-size: 25px;
    color: var(--text-secondary);
-   border-left: 1px gray solid;
+ 
 
    
 }

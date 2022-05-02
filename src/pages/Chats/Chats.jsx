@@ -1,5 +1,6 @@
 import React, {useState, useMemo} from 'react'
 import { useDispatch, useSelector } from 'react-redux'
+
 import {returnJokeSendMessage } from '../../store/reducers/messages'
 import InputElement from '../../UI/Input/Input'
 import Modal from '../../UI/Modal/Modal'
@@ -19,6 +20,7 @@ const [username, setUserName] = useState('f')
 const [searchQuery, setSearchQuery] = useState('')
 const [imgUser, setImgUser] = useState('')
 const [id, setId] = useState('')
+
 
 
 const { users } = useSelector(state => state.messages)
@@ -46,19 +48,15 @@ const sendMessage = (message) => {
         username: 'Me'
     }
 
-
     const userId = id
     dispatch(returnJokeSendMessage(newMessage, userId, username))
     setTimeout(() => {
         setModalVisible(true)
-      }, 2500)
+      }, 6000)
        setTimeout(() => {
            setModalVisible(false)
-       }, 5000)
+       }, 9000)
  
-
-
-
 }
 return (
     <div className={s.wrapper_messages}>
@@ -69,7 +67,7 @@ return (
         <ChatItem key={user.id} user={user} openNewChat={openChat} setId={setId}  messages={messages} 
              setImgUser={setImgUser}
              />
-           )}
+        )}
          </div>
         <div className={s.chat_wrapper}> {visibleChat 
         ? <div className={s.elements_of_chat}>

@@ -1,16 +1,10 @@
 import React, { useEffect} from 'react'
-
-
 import s from './Messages.module.css'
 import MyMessage from './Messages/Message'
 import UserMessage from './Messages/UserMessage'
 
-const  MessagesPage = ({messages, setUserName, imgUser, sendMessage}) =>  {
-  
-   const me ='Me'
-
-
-   
+const  MessagesPage = ({messages, setUserName, imgUser}) =>  {
+   const me = 'Me'
     useEffect(() => {
     setUserName(messages.username)   
  }, [setUserName, messages.username])
@@ -26,11 +20,8 @@ const  MessagesPage = ({messages, setUserName, imgUser, sendMessage}) =>  {
                 } 
             </div>
             )}</div>
-        
    
     )
 }
-
-
 
 export default MessagesPage
