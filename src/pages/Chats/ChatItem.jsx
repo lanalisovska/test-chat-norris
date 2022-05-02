@@ -1,4 +1,4 @@
-import React, { useState } from 'react'
+import React, { useEffect, useState } from 'react'
 import s from './Chats.module.css'
 import online_icon from './../../UI/icons/online_status.png'
 import offline_icon from './../../UI/icons/offline_status.png'
@@ -17,6 +17,8 @@ const ChatItem = ({user, openNewChat, setId, messages, setImgUser}) => {
        setId(id)
        setImgUser(image)
     }
+ 
+
     return (
         <div className={s.userItem} onClick={() => openChat(user)}>
            
