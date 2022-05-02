@@ -28,7 +28,7 @@ export default function InputElement({sendMessage}) {
              placeholder='new message...'/>
                <span style={{ color: 'red' }}>{errors?.username && <p>{errors?.username?.message}</p>}</span>
                
-             <div> <img className={s.send_icon} src={btn_send} onClick={() => sendNewMessage(message)}/></div>
+             <div> <img  alr='send_icon' className={s.send_icon} src={btn_send} onClick={() => sendNewMessage(message)}/></div>
             </form>
         </div>
     )
